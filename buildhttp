@@ -1,0 +1,8 @@
+sudo sh sudo.sh
+sudo sh rmdir.sh
+sudo mkdir web
+sudo wget -P web https://downloads.apache.org/apr/apr-1.7.0.tar.gz
+sudo tar xvfz web/apr-1.7.0.tar.gz -C ./web
+sudo yum install -y gcc
+sudo sh web/apr-1.7.0/configure --prefix=/var/lib/jenkins/workspace/test_2/web/apr
+sudo cd web/apr-1.7.0 ; sudo make ; sudo make install
